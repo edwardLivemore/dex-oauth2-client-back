@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+security:
+  oauth2:
+    client:
+      clientId: oauth2-client-back
+      clientSecret: 123456
+      user-authorization-uri: http://localhost:8081/oauth/authorization
+      access-token-uri: http://localhost:8081/oauth/token
+      scope: server
+    resource:
+      jwt:
+        key-value: |
+          -----BEGIN PUBLIC KEY-----
+          ***
+          -----END PUBLIC KEY-----
